@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${ibmPlexSans.variable} antialiased font-ibmPlexMono bg-customGray text-customWhite`}
       >
-        {typeof window !== "undefined" && <Preloader />}
+        <Preloader />
         <div className="z-50 pointer fixed w-2 h-2 bg-orange rounded-full top-0 left-0"></div>
         <div className="z-50 pointer-outline fixed w-6 h-6 border-orange border-[1px] rounded-full top-0 left-0 transition-all"></div>
         {typeof window !== "undefined" && (

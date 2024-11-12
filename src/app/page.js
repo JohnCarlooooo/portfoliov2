@@ -39,10 +39,13 @@ export default function Home() {
         </div>
         <div>
           <Image
+            style={{ height: "auto", width: "auto" }}
             src="https://media1.tenor.com/m/Q6fRllN1LAQAAAAd/wow.gif"
             height={500}
             width={500}
-            alt="a man in a suit and tie is wearing glasses and making a surprised face ."
+            alt="Wow"
+            unoptimized
+            priority
           />
         </div>
       </div>

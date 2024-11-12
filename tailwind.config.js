@@ -7,9 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        ibmPlexMono: ["var(--font-ibmPlexMono)"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        orange: "#f94d0a",
+        customGray: "#191919",
+        customLightGray: "#373737",
+        customWhite: "#dddddd",
       },
     },
   },

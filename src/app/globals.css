@@ -2,20 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  cursor: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.pointer,
+.pointer-outline {
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.customHover {
+  display: inline-block;
+  position: relative;
+}
+
+.customHover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f94d0a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.customHover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@layer components {
+  .customHover {
+    @apply hover:tracking-[1px] duration-300;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

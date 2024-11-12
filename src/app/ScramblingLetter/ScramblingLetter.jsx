@@ -16,7 +16,7 @@ const ScramblingLetter = ({ letter }) => {
     return () => {
       if (timeout) clearTimeout(timeout);
     };
-  }, [curIndex]);
+  }, [curIndex, letter]);
   return (
     <AnimatePresence mode="sync">
       <motion.div className="overflow-y-hidden w-8 flex justify-center items-center">

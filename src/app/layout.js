@@ -1,6 +1,6 @@
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import LenisProvider from "@/app/Providers/LenisProvider";
+import LenisProvider from "./LenisProvider";
 import Script from "next/script";
 import Preloader from "./Preloader/Preloader";
 const ibmPlexSans = IBM_Plex_Sans({
@@ -21,10 +21,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${ibmPlexSans.variable} antialiased font-ibmPlexMono bg-customGray text-customWhite`}
       >
-        <Preloader />
+        {typeof window !== "undefined" && <Preloader />}
         <div className="z-50 pointer fixed w-2 h-2 bg-orange rounded-full top-0 left-0"></div>
         <div className="z-50 pointer-outline fixed w-6 h-6 border-orange border-[1px] rounded-full top-0 left-0 transition-all"></div>
-        <LenisProvider>{children}</LenisProvider>
+        {typeof window !== "undefined" && (
+          <LenisProvider>{children}</LenisProvider>
+        )}
+        {typeof window === "undefined" && children}
         <Script type="text/javascript" src="/scripts/pointer.js" />
       </body>
     </html>

@@ -1,7 +1,6 @@
 "use client";
-
 import React from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 
 const LenisProvider = ({ children }) => {
   const lenis = new Lenis();

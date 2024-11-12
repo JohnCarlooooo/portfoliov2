@@ -1,9 +1,8 @@
 "use client";
-
-import UseRunningTime from "@/app/Hooks/UseRunningTime";
+import useRunningTime from "./useRunningTime";
 
 const RunningTime = () => {
-  const time = UseRunningTime();
+  const time = useRunningTime();
   return <span>{time}</span>;
 };
 

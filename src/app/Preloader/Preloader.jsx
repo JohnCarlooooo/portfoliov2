@@ -1,14 +1,14 @@
 "use client";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { Expo, gsap } from "gsap";
 import ScramblingLetter from "../ScramblingLetter/ScramblingLetter";
 
 const Preloader = () => {
   const name = "john carlo carbonel";
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       document.body.style.cursor = "default";
-      window.scrollTo(0, 0);
+      if (typeof window !== "undefined") window.scrollTo(0, 0);
     }, 4100);
     const tl = gsap.timeline({ delay: 4 });
     tl.to("#preloader", {

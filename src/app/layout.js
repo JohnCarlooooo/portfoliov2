@@ -11,7 +11,8 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export const metadata = {
   title: "John Carlo Carbonel",
-  description: "John Carlo Carbonel's portfolio, a full-stack web developer.",
+  description:
+    "John Carlo Carbonel's portfolio. A Full-Stack Web Developer & an aspiring DevOps Engineer.",
 };
 
 export default function RootLayout({ children }) {
